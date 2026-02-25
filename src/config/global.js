@@ -1,17 +1,30 @@
 export default {
   global: {
-    Name: 'Nombre del recurso educativo',
-    Description: 'Descripción del RED',
-    imagenBannerPrincipal: require('@/assets/curso/portada/banner-principal.svg'),
+    componenteFormativo: 'Manejo de datos',
+    descripcionCurso:
+      'El registro de la información contiene varios criterios que permiten interpretar muchos datos. Para su máxima potenciación, es necesario comprender sus componentes, ciclos y objetivos, efectuando parámetros preestablecidos, apoyándose en técnicas y fuentes para la recolección de información; estos deben estar bajo criterios y modelos científicamente validados, porque serán de gran ayuda para el desarrollo académico y laboral del aprendiz.',
+    imagenBannerPrincipal: require('@/assets/curso/portada/banner-princiapal.png'),
     fondoBannerPrincipal: require('@/assets/curso/portada/fondo-banner-principal.png'),
     imagenesDecorativasBanner: [
       {
         clases: ['banner-principal-decorativo-1', 'd-none', 'd-lg-block'],
-        imagen: require('@/assets/curso/portada/banner-principal-decorativo-1.svg'),
+        imagen: require('@/assets/curso/portada/1.png'),
       },
       {
         clases: ['banner-principal-decorativo-2'],
-        imagen: require('@/assets/curso/portada/banner-principal-decorativo-2.svg'),
+        imagen: require('@/assets/curso/portada/2.png'),
+      },
+      {
+        clases: ['banner-principal-decorativo-3'],
+        imagen: require('@/assets/curso/portada/3.png'),
+      },
+      {
+        clases: ['banner-principal-decorativo-4'],
+        imagen: require('@/assets/curso/portada/4.png'),
+      },
+      {
+        clases: ['banner-principal-decorativo-5'],
+        imagen: require('@/assets/curso/portada/5.png'),
       },
     ],
   },
@@ -24,34 +37,32 @@ export default {
       },
       {
         nombreRuta: 'introduccion',
-        icono: 'fas fa-info-circle',
+        icono: 'fas fa-info',
         titulo: 'Introducción',
         desarrolloContenidos: true,
       },
       {
         nombreRuta: 'tema1',
         numero: '1',
-        titulo: 'Tema 1',
+        titulo: 'Datos',
         desarrolloContenidos: true,
-        subMenu: [
-          {
-            numero: '1.1',
-            titulo: 'Subtema 1',
-            hash: 't_1_1',
-          },
-        ],
       },
-
       {
         nombreRuta: 'tema2',
         numero: '2',
-        titulo: 'Tema 2',
+        titulo: 'Fuentes y técnicas de recolección de información',
         desarrolloContenidos: true,
       },
       {
         nombreRuta: 'tema3',
         numero: '3',
-        titulo: 'Tema 3',
+        titulo: 'Instrumentos de recolección de datos',
+        desarrolloContenidos: true,
+      },
+      {
+        nombreRuta: 'tema4',
+        numero: '4',
+        titulo: 'Manejo y protección de datos',
         desarrolloContenidos: true,
       },
     ],
@@ -86,7 +97,7 @@ export default {
       {
         icono: 'fas fa-file-pdf',
         titulo: 'Descargar PDF',
-        download: 'downloads/dist.pdf',
+        download: 'downloads/122153_CF10_DU.pdf',
       },
       {
         icono: 'fas fa-download',
@@ -102,90 +113,204 @@ export default {
   },
   complementario: [
     {
-      tema: '',
-      referencia: '',
-      tipo: 'Sitio web',
-      link: '',
+      tema: 'Fuentes y técnicas de recolección de información',
+      referencia:
+        'Marketing 2.0. (2019). <em>Fuentes primarias y secundarias (Datos primarios y secundarios) tipos de información</em> [video]. YouTube ',
+      tipo: 'Video',
+      link: 'https://www.youtube.com/watch?v=88DpgQxCq0E ',
+    },
+    {
+      tema: 'Instrumentos de recolección de datos',
+      referencia:
+        'TeoCom. (2021). <em>Confiabilidad y validez de un instrumento de investigación I Metodología de la Investigación</em> [video]. YouTube ',
+      tipo: 'Video',
+      link: 'https://youtu.be/yZH6WGoQMhk',
+    },
+    {
+      tema: 'Instrumentos de recolección de datos',
+      referencia:
+        'Jibaro X. (2019). <em>Tipos de preguntas en una encuesta</em> [video]. YouTube ',
+      tipo: 'Video',
+      link: 'https://youtu.be/mwnQuUi9014 ',
+    },
+    {
+      tema: 'Manejo y protección de datos',
+      referencia: 'AWS (2019). <i>Data Classification</i>. ',
+      tipo: 'PDF',
+      link: 'https://www.oas.org/en/sms/cicte/docs/ENG-Data-Classidication.pdf',
     },
   ],
   glosario: [
     {
-      termino: 'Término',
-      significado: 'Definición',
+      termino: 'Ciclo de vida de los datos',
+      significado:
+        'esquema que permitirá la objetividad de la información, integrando la vida útil del dato, características de almacenamiento, conservación, respaldo y eliminación bajo términos, protocolos y criterios establecidos.',
+    },
+    {
+      termino: 'Clasificación de los datos',
+      significado:
+        'organización de la información con secuencia lógica, funcional; en algunos escenarios limitada.',
+    },
+    {
+      termino: 'Fuente primaria',
+      significado: 'información original de primera mano.',
+    },
+    {
+      termino: 'Fuente secundaria',
+      significado: 'contenidos procesados de una fuente primaria.',
+    },
+    {
+      termino: 'Fuente terciaria',
+      significado:
+        'se utilizan para buscar datos o para obtener una idea general.',
+    },
+    {
+      termino: 'Instrumento',
+      significado:
+        'elemento que sirve de herramienta para el levantamiento de información.',
+    },
+    {
+      termino: 'Método',
+      significado:
+        'secuencia de procesos, procedimientos o actividades, ordenada para el desarrollo de un ejercicio ejecutando un protocolo establecido.',
+    },
+    {
+      termino: 'Proceso',
+      significado:
+        'secuencia de actividades que requieren ser desarrolladas bajo mecanismos controlados.',
+    },
+    {
+      termino: 'Sistema de clasificación de datos',
+      significado:
+        'mecanismo para organizar la proyección de la información que se obtendrá, con criterios de funcionalidad del dato, la evaluar su comportamiento y nivel de riesgo.',
+    },
+    {
+      termino: 'Técnica',
+      significado:
+        'características para el desarrollo de una actividad específica que parte de la pericia y la secuencia para adelantar actividades. ',
     },
   ],
   referencias: [
     {
-      referencia: '',
+      referencia:
+        'AWS, (2019). <i>Data Classification.</i> ENG-Data-Classidication.pdf (oas.org)',
+    },
+    {
+      referencia:
+        'Dagnino S. (2015). Tipos de datos y escalas de medida. <i>Rev Chil Anest</i>, 43. p.109-111.',
+    },
+    {
+      referencia:
+        'Hernández, R. et al. (2014). <i>Metodología de la investigación: las rutas cuantitativa, cualitativa y mixta</i> (6ta ed.). McGraw Hill México.',
+    },
+    {
+      referencia:
+        'Ley 1581 de 2012. Por la cual se dictan disposiciones generales para la protección de datos personales. Octubre 17 de 2012. ',
+      link:
+        'https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=49981',
+    },
+    {
+      referencia:
+        'Rivera, M. & Fernández, M. (2015). <i>Fuentes de Información.</i> ',
+      link:
+        'https://repository.uaeh.edu.mx/bitstream/bitstream/handle/123456789/16700/LECT132.pdf',
+    },
+    {
+      referencia:
+        'Superintendencia de Industria y Comercio de Colombia. (2022). <i>Argumentos y concepto aplicación del derecho de habeas data.</i> ',
+      link: 'https://www.sic.gov.co/manejo-de-informacion-personal',
+    },
+    {
+      referencia:
+        'Tamayo, C. & Siesquén, I. (s.f.). <i>Técnicas e Instrumentos de Recolección de Datos.</i> ',
       link: '',
     },
   ],
-  creditos: [
-    {
-      titulo: 'ECOSISTEMA DE RECURSOS EDUCATIVOS DIGITALES',
-      autores: [
-        {
-          nombre: 'Nombre completo',
-          cargo: 'Responsable del ecosistema',
-          centro: 'Dirección General',
-        },
-        {
-          nombre: 'Nombre completo',
-          cargo: 'Responsable de línea de producción',
-          centro: 'Centro XYZ - Regional XYZ',
-        },
-      ],
-    },
-    {
-      titulo: 'CONTENIDO INSTRUCCIONAL',
-      autores: [
-        {
-          nombre: 'Nombre responsable',
-          cargo: 'Nombre del rol',
-          centro: 'Centro XYZ - Regional XYZ',
-        },
-      ],
-    },
-    {
-      titulo: 'DISEÑO Y DESARROLLO DE RECURSOS EDUCATIVOS DIGITALES',
-      autores: [
-        {
-          nombre: 'Nombre responsable',
-          cargo: 'Diseñador de contenidos',
-          centro: 'Centro XYZ - Regional XYZ',
-        },
-        {
-          nombre: 'Nombre responsable',
-          cargo: 'Desarrollador <i>full stack</i>',
-          centro: 'Centro XYZ - Regional XYZ',
-        },
-        {
-          nombre: 'Nombre responsable',
-          cargo: 'Animador y productor audiovisual',
-          centro: 'Centro XYZ - Regional XYZ',
-        },
-      ],
-    },
-    {
-      titulo: 'VALIDACIÓN RECURSO EDUCATIVO DIGITAL',
-      autores: [
-        {
-          nombre: 'Nombre responsable',
-          cargo: 'Validador y vinculador de recursos educativos digitales',
-          centro: 'Centro XYZ - Regional XYZ',
-        },
-        {
-          nombre: 'Nombre responsable',
-          cargo: 'Evaluador de contenidos inclusivos y accesibles',
-          centro: 'Centro XYZ - Regional XYZ',
-        },
-      ],
-    },
-  ],
-  creditosAdicionales: {
-    imagenes:
-      'Fotografías y vectores tomados de <a href="https://www.freepik.es/" target="_blank">www.freepik.es</a>, <a href="https://www.shutterstock.com/" target="_blank">www.shutterstock.com</a>, <a href="https://unsplash.com/" target="_blank">unsplash.com </a>y <a href="https://www.flaticon.com/" target="_blank">www.flaticon.com</a>',
-    creativeCommons:
-      'Licencia creative commons CC BY-NC-SA<br><a href="https://creativecommons.org/licenses/by-nc-sa/2.0/" target="_blank">ver licencia</a>',
+  creditos: {
+    liderEquipo: [
+      {
+        nombre: 'Maria Camila Garcia Santamaria',
+        cargo: 'Líder del equipo',
+        centro: 'Dirección General',
+      },
+    ],
+    contenidoInstruccional: [
+      {
+        nombre: 'Rafael Neftalí Lizcano Reyes',
+        cargo: 'Asesor metodológico y pedagógico',
+        centro:
+          'Centro Industrial del Diseño y la Manufactura - Regional Santander',
+      },
+    ],
+    desarrolloProducto: [
+      {
+        nombre: 'Francisco José Lizcano Reyes',
+        cargo: 'Responsable del equipo',
+        centro:
+          'Centro Industrial del Diseño y la Manufactura - Regional Santander',
+      },
+      {
+        nombre: 'Nombre',
+        cargo: 'Diseño web',
+        centro:
+          'Centro Industrial del Diseño y la Manufactura - Regional Santander',
+      },
+      {
+        nombre: 'Nombre',
+        cargo: 'Producción audiovisual',
+        centro:
+          'Centro Industrial del Diseño y la Manufactura - Regional Santander',
+      },
+      {
+        nombre: 'Nombre',
+        cargo: 'Desarrollo front-end',
+        centro:
+          'Centro Industrial del Diseño y la Manufactura - Regional Santander',
+      },
+      {
+        nombre: 'Nombre',
+        cargo: 'Validación de diseño y contenido',
+        centro:
+          'Centro Industrial del Diseño y la Manufactura - Regional Santander',
+      },
+    ],
+    gestoresRepositorio: [
+      {
+        nombre: 'Álvaro Andrés Angarita Ramirez',
+        cargo: 'Validación y vinculación en plataforma LMS',
+        centro: 'Centro de Comercio y Servicios - Regional Tolima',
+      },
+      {
+        nombre: 'Daniel Felipe Varón Molina',
+        cargo: 'Validación y vinculación en plataforma LMS',
+        centro: 'Centro de Comercio y Servicios - Regional Tolima',
+      },
+      {
+        nombre: 'Milady Tatiana Villamil Castellanos',
+        cargo: 'Validación y vinculación en plataforma LMS',
+        centro: 'Centro de Comercio y Servicios - Regional Tolima',
+      },
+    ],
   },
+  // creditosInicio: [
+  //   {
+  //     titulo: 'En alianza',
+  //     contenido: [
+  //       require('@/assets/template/logo-sena-naranja.svg'),
+  //       require('@/assets/template/mintic.jpg'),
+  //       require('@/assets/template/minsalud.jpg'),
+  //     ],
+  //   },
+  //   {
+  //     titulo: 'En compañía',
+  //     contenido: [
+  //       require('@/assets/template/presidencia.jpg'),
+  //       require('@/assets/template/ecopetrol.jpg'),
+  //     ],
+  //   },
+  //   {
+  //     titulo: 'Una iniciativa',
+  //     contenido: [require('@/assets/template/santander.jpg')],
+  //   },
+  // ],
 }

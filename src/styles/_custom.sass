@@ -1,32 +1,254 @@
+.banner-principal__img img
+  width: 360px
+  margin: 0 auto
+  margin-right: -2px
+  margin-top: -33px
 .banner-principal-decorativo
   &-1
     animation: float1 3.5s ease-in-out infinite alternate
     position: absolute
-    top: 20%
-    right: 10%
+    top: 18%
+    right: 62%
+    img 
+      width: inherit !important
+      margin-right: 0px
+      margin-top: 0px
   &-2
     animation: float1 2.8s ease-in-out infinite alternate
     position: absolute
-    top: 51%
-    right: 30%
-
+    top: 28%
+    right: 2%
+    img 
+      width: inherit !important
+      margin-right: 0px
+      margin-top: 0px
+  &-3
+    animation: scale 2.8s ease-in-out infinite alternate
+    position: absolute
+    top: 68%
+    right: 10%
+    img 
+      width: inherit !important
+      margin-right: 0px
+      margin-top: 0px
+  &-4
+    animation: float1 4.8s ease-in-out infinite alternate
+    position: absolute
+    top: 70%
+    right: 70%
+    img 
+      width: inherit !important
+      margin-right: 0px
+      margin-top: 0px
+  &-5
+    animation: rotation 4s infinite linear
+    position: absolute
+    top: 21%
+    right: 10%            
+    z-index: -1
+    img 
+      width: inherit !important
+      margin-right: 0px
+      margin-top: 0px
+.banner-principal__img
+  z-index: 1
+.banner-interno__fondo
+  background-image: url("../assets/curso/portada/6.svg") !important
 @keyframes float1
   0%
     transform: translateY(20px)
+
   100%
     transform: translateY(0px)
+
+@-webkit-keyframes rotation 
+  from 
+    -webkit-transform: rotate(0deg)  
+  to 
+    -webkit-transform: rotate(359deg)  
+
+@keyframes scale
+  0%
+    transform: scale(1)
+
+  100%
+    transform: scale(1.2) 
+
+.img-a 
+  display: block
+  margin: auto
+
+.img-t
+  width: auto
+  height: auto  
+
+.cajon.color-acento-botones
+  background-color: #FEE9E0  
+
+.cajon.color-primario
+  background-color: #EDF6E4    
+
+.img-infografica.color-acento-botones .img-infografica__item__numero
+  color: white
+
+.tarjeta.color-secundario
+  background-color: #F8FAD6
+  border: 2px solid #DCE736     
+
+.tarjeta.color-acento-contenido
+  background-color: #BDBFDC
+  border: 2px solid #3D46C2  
+  *
+    color: $color-sistema-texto
+
+.bloque-texto-b.color-acento-botones::before
+  background-color: #FEE9E0
+.bloque-texto-b i
+  color: #F85316
+
+.acordion
+  .tarjeta.bg1
+    background-color: #F6F6F6
+
+.tarjeta.bg1.acordion__activo
+  background-color: #FCFDEA !important     
   
-.banner-principal .tarjeta
-  background-position: left 50% !important
+.acordion__accion__btn--a
+  background-color: #DCE736
 
-.banner-principal__row .banner-principal__img
-  width: 400px !important  
+.lista-ul--color li > i:first-of-type
+  color: #F85316
 
-.titulo-principal.color-acento-contenido .titulo-principal__numero span
-  color: white !important
+.crd_hover_txt
+  position: relative  
+  padding: 0 !important
+  overflow: hidden !important  
+  &:hover    
+    .crd_hover_txt--body   
+      transition: all 0.8s cubic-bezier(0.42, 0, 0.58, 1) 
+      transform: translateY(0)
 
-.banner-interno__titulo__icono i
-  color: $color-primario
+  .crd_hover_txt--body
+    position: absolute
+    padding: 1.5rem 0.8rem
+    bottom: 0    
+    transition: all 0.8s cubic-bezier(0.42, 0, 0.58, 1)
+    transform: translateY(calc( 100% - 3.85rem ))
+    background-color: #DCE736
+  
+  @media (min-width:1200px) and (max-width:1400px)  
+    .crd_hover_txt--body
+      h4
+        font-size: 16px
+      p
+        font-size: 0.85em                    
 
-figcaption
-  font-weight: normal
+.tarjeta.color-primario--borde
+  border: 0px
+
+.tabs-a__tab
+  background-color: #E8E8E8
+
+.tarjeta.color-primario
+  background-color: #D5E9C0
+  *
+    color: $color-sistema-texto
+
+.linea-tiempo-d__item__number
+  border-radius: 50px !important
+  padding: 0px !important
+
+.linea-tiempo-d__item__dots::after
+  border-left: 5px dotted #f1f886d3 !important   
+
+.linea-tiempo-d
+  &__item
+    &--selected
+      .linea-tiempo-d
+        &__item
+          &__content
+            background-color: #FCFDEA !important
+            &__title
+              font-weight: $base-bold-font-weight
+          &__number
+            font-weight: $base-bold-font-weight
+    &__col-number
+      display: flex
+      flex-direction: column
+
+    &__dots
+      flex: 1
+      display: flex
+      justify-content: center
+      padding: 5px 0
+      &:after
+        content: ''
+        display: block
+        width: 0
+        height: 100%
+        border-left: 5px dotted $color-sistema-e
+    &__number
+      display: flex
+      align-items: center
+      justify-content: center
+      min-width: 40px
+      height: 40px
+      cursor: pointer
+      transition: background-color .3s ease-in-out, color .3s ease-in-out
+    &__content
+      background-color: #E8E8E8 !important     
+      &__title
+        display: flex
+        align-items: center
+        height: 40px
+        cursor: pointer
+        &:hover
+          font-weight: $base-bold-font-weight
+      &__slot
+        overflow: hidden
+        transition: height .5s ease-in-out
+  .tarjeta
+    border-radius: 5px
+.linea-tiempo-d.color-primario .linea-tiempo-d__item--selected .linea-tiempo-d__item__number
+  background-color: #DCE738 !important
+  color: #12263F
+  
+.linea-tiempo-d__item__number
+  background-color: #DCE738 !important
+
+@media (max-width: 412px)
+  .linea-tiempo-d__item__content__title 
+    height: 85px !important       
+  
+.tarjeta.color-secundario
+  border: 0px 
+
+.tarjeta.color-acento-botones
+  background-color: #3D46C2
+  *
+    color: white
+
+.horizontal-scroll
+  align-items: stretch !important           
+
+
+.cuadrado i
+  font-size: 18px
+  color: #3D46C2
+  padding-bottom: 4px
+
+@media (min-width:$bp-min-xl)
+  .tamano-tabs .col-xl-3
+    width: 40% !important
+  .tamano-tabs .col-xl-9
+    width: 60% !important
+  .tamano-tabs button  
+    white-space: normal
+  .tamano-tabs .tabs-a__tab
+    padding: 15px
+
+.banner-principal__img
+  width: 400px !important
+
+.tabs-c__tab--active  
+  font-weight: bold
